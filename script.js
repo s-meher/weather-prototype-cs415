@@ -78,11 +78,15 @@ function getNextFewHoursRain(times, probabilities) {
 }
 
 
-// Need 3: walking to class
+// Need 3: walking to class - implicit chnage
 function getWalkingRecommendation(temp, rainChance) {
 
     if (rainChance >= 50) {
         return "I'd probably take transit. Rain is likely.";
+    }
+
+    if (rainChance >= 40) {
+        return "Walking should be fine, but bring an umbrella.";
     }
 
     if (temp > 88) {
@@ -96,7 +100,7 @@ function getWalkingRecommendation(temp, rainChance) {
     return "Yes, it looks comfortable enough to walk.";
 }
 
-//Water bottle - Explicit change
+//Need 4: water bottle - Explicit change
 function getWaterRecommendation(temp) {
 
     if (temp >= 80) {
