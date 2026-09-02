@@ -96,15 +96,18 @@ function getWalkingRecommendation(temp, rainChance) {
     return "Yes, it looks comfortable enough to walk.";
 }
 
-
-// Need 4: water bottle
+//Water bottle - Explicit change
 function getWaterRecommendation(temp) {
 
-    if (temp >= 75) {
-        return "Yes, I'd bring a water bottle.";
+    if (temp >= 80) {
+        return "Yes, definitely bring a water bottle.";
     }
 
-    return "Probably not necessary for a short trip.";
+    if (temp >= 65) {
+        return "I'd bring one, especially if you'll be outside for a while.";
+    }
+
+    return "Optional for a short trip, but it doesn't hurt to bring one.";
 }
 
 
